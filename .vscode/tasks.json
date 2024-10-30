@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Startup Sass",
+            "type": "shell",
+            "command": "sass --watch C:/Users/Jacob/AppData/Local/FoundryVTT/Data/systems/daggerheart-for-foundryvtt/sass/:C:/Users/Jacob/AppData/Local/FoundryVTT/Data/systems/daggerheart-for-foundryvtt/css/daggerheart-for-foundryvtt.css"
+        },
+        {
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "option": "watch",
+            "problemMatcher": [
+                "$tsc-watch"
+            ],
+            "group": "build",
+            "label": "tsc: watch - tsconfig.json"
+        }
+    ]
+}

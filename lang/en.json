@@ -1,0 +1,49 @@
+{
+    "DAGGERHEART-FOR-FOUNDRY": {
+        "Ability": {
+            "Agility": { "long": "Agility", "abbr": "agl" },
+            "Strength": { "long": "Strength", "abbr": "str" },
+            "Finesse": { "long": "Finesse", "abbr": "fin" },
+            "Instinct": { "long": "Instinct", "abbr": "ins" },
+            "Presence": { "long": "Presence", "abbr": "pre" },
+            "Knowledge": { "long": "Knowledge", "abbr": "kno" }
+        },
+        "SheetLabels": {
+            "Actor": "Boilerplate Actor Sheet",
+            "Item": "Boilerplate Item Sheet"
+        },
+        "Item": {
+            "Spell": {
+                "SpellLVL": "Level {level} Spells",
+                "AddLVL": "Add LVL {level}"
+            }
+        },
+        "Effect": {
+            "Source": "Source",
+            "Toggle": "Toggle Effect",
+            "Temporary": "Temporary Effects",
+            "Passive": "Passive Effects",
+            "Inactive": "Inactive Effects"
+        }
+    },
+
+    "TYPES": {
+        "Actor": {
+            "character": "Character",
+            "npc": "NPC",
+            "adversary": "Adversary" 
+        },
+        "Item": {
+            "item": "Item",
+            "armor": "Armor",
+            "treasure": "Treasure",
+            "weapon": "Weapon",
+            "domain-card": "Domain Card",
+            "ability-card": "Ability Card",
+            "environment-card": "Environment Card",
+            "campaign-card": "Campaign Card",
+            "class-card": "Class Card"
+        }
+    }
+    
+}
