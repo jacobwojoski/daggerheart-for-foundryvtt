@@ -12,6 +12,12 @@
             },
             "currency":{
                 "showCoins": false,
+                "total":{
+                    "coin": 0,
+                    "handfuls": 0,
+                    "bags": 0,
+                    "chests": 0
+                },
                 "coins": {
                     "value": 0,
                     "min": 0,
@@ -370,10 +376,11 @@
         }
     },
     "Item": {
-        "types": ["item", "armor", "treasure", "weapon", "consumable",
-            "card","domain-card"
+        "types": [
+            "item",
+            "treasure", "consumable",
+            "armor", "weapon"
         ],
-
         "templates": {
             "base": {
                 "img":"",
@@ -383,8 +390,10 @@
             },
             "currency":{
                 "total":{
-                    "coins": 0,
-                    "handfuls": 0
+                    "coin": 0,
+                    "handfuls": 0,
+                    "bags": 0,
+                    "chests": 0
                 },
                 "showCoins": false,
                 "coins": {
@@ -408,38 +417,20 @@
                     "max": 1
                 }
             },
-            "roll-formula": {
+            "formulas": {
                 "duality": "",
                 "damage": ""
             },
-            "perm-modifiers":[{
-                "selector": 0,
-                "value": 0
-            }]
+            "threshold": {
+                "minor": 0,
+                "major": 0,
+                "severe": 0,
+                "extreme": 0,
+                "deadly": 0
+            }
         },
-        "card": {
-            "templates": ["base", "roll-formula"],
-            "uses": -1,
-            "refresh": {
-                "onLongRest": false,
-                "onShortRest": false,
-                "reqRestPoints": 0
-            },
-            "saved-values":[],
-            "use-cost":{
-                "formula":"",
-                "selector": 0
-            },
-            "domain": {
-                "is-domain-card": false,
-                "domain": "",
-                "icon": "",
-                "stress-cost": 0
-            },
-            "type": 0
-        },
-        "domain-card": {
-
+        "item": {
+            "templates": ["base", "currency"]
         },
         "treasure": {
             "templates": ["base", "currency"]
@@ -449,34 +440,24 @@
             "uses": 0
         },
         "armor": {
-            "templates": ["base", "currency"],
+            "templates": ["base", "currency", "threshold"],
             "isEquiped": false,
             "value": 0,
             "slots": 6,
-            "threshold": {
-                "minor": 0,
-                "major": 0,
-                "severe": 0,
-                "extreme": 0,
-                "deadly": 0
-            },
             "resistance": {
                 "has": false,
                 "type": 0
             }
         },
-        "item": {
-            "templates": ["base"]
-        },
         "weapon": {
-            "templates": ["base", "roll-formula", "currency", "perm-modifiers"],
-            "hands": 0,
-            "feature": "",
-            "range": 0,
-            "trait": 0,
+            "templates": ["base", "formulas", "currency"],
+            "type": 0,
             "dmg-dice": 0,
-            "is-primary": false,
-            "is-secondary": false
-        }  
+            "trait": 0,
+            "feature": "",
+            "hands": 0,
+            "range": 0,
+            "isEquiped":true
+        }
     }
 }
